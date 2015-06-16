@@ -12,9 +12,10 @@ import codecs
 
 
 #读取地市网页代码
+year ='2013'
 province='33'
 city =  '3309'
-city_url = 'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2013/'+ province +'/' + city +'.html'
+city_url = 'http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/'+year+'/'+ province +'/' + city +'.html'
 user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
 headers = { 'User-Agent' : user_agent }
 
@@ -67,14 +68,3 @@ with open('/Users/Sheen/Desktop/qh.csv','w',newline='',encoding='utf-8') as csvf
      writer.writerow(headers)
      for s in reg_add_list:
          writer.writerow(s)
-         
-
-          
-
-
-        
-        
-        
-
-        
-        
